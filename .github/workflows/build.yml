@@ -48,7 +48,7 @@ jobs:
       - name: Build contract
         run: |
           stellar contract build \
-            --meta home_domain=example.com \
+            --meta home_domain=stellar.toml \
             --meta source_repo=github:${{ github.repository }}
 
           stellar contract optimize --wasm ${{ env.WASM_FILE }}
